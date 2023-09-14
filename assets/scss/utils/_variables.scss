@@ -34,8 +34,19 @@ $grays: (
 ) !default;
 // scss-docs-end gray-colors-map
 // fusv-enable
+//新增的色系
+
+$conblue-default: #366CD9 !default;
+$conblue-dark:    #0E46B8 !default;
+$conblue-a11y:    #04328D !default;
+$conblue-light:   #8DAEF2 !default;
+$conblue-thint:   #DFEAFF !default;
+$conblue-thintsec:#E8F0FF !default;
+
+
 
 // scss-docs-start color-variables
+$conblue: #366CD9 !default;
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -46,10 +57,15 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+$a11y:    #04328D !default;
+$thintsec:#E8F0FF !default;
+$orangedark: #ca6510 !default;
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
 $colors: (
+  "conblue":    $conblue,
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,
@@ -63,7 +79,9 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "a11y":       $conblue-a11y,
+  "thintsec":   $thintsec,
 ) !default;
 // scss-docs-end colors-map
 
@@ -175,6 +193,16 @@ $cyan-600: shade-color($cyan, 20%) !default;
 $cyan-700: shade-color($cyan, 40%) !default;
 $cyan-800: shade-color($cyan, 60%) !default;
 $cyan-900: shade-color($cyan, 80%) !default;
+
+//新增的
+$conblue: ( 
+  "conblue-default": $conblue-default,
+  "conblue-dark":    $conblue-dark,
+  "conblue-a11y":    $conblue-a11y,
+  "conblue-light":   $conblue-light,
+  "conblue-thint":   $conblue-thint,
+  "conblue-thintsec":  $conblue-thintsec,
+)!default;
 
 $blues: (
   "blue-100": $blue-100,
@@ -298,26 +326,34 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $conblue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $white !default;
 $dark:          $gray-900 !default;
+$a11y:          $conblue-a11y !default;
+$thintsec:      $thintsec !default;
+$orangedark:    $orange-600 !default;    
+
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
+  "primary":    $conblue,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "lighty":     $conblue,
+  "a11y":       $a11y,
+  "thintsec":   $thintsec,
+  "orangedark": $orangedark,
 ) !default;
 // scss-docs-end theme-colors-map
 
